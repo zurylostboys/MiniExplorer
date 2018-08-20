@@ -4,7 +4,7 @@ require_once(dirname(__FILE__).'/../../config.inc.php');
 
 session_start();
 
-$getinfo = $_SESSION[$rpc_client]->getinfo();
+$getinfo = $_SESSION[$rpc_client]->getblockchaininfo();
 $newest_hash = $_SESSION[$rpc_client]->getblockhash($getinfo['blocks']);
 $newest_block = $_SESSION[$rpc_client]->getblock($newest_hash);
 
