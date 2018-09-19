@@ -9,7 +9,7 @@ require_once(dirname(__FILE__).'/../inc/config.inc.php');
 require_once(dirname(__FILE__).'/../lib/common.lib.php');
 
 $daemon = new RPCclient($rpc_user, $rpc_pass);
-$getinfo = $daemon->getinfo();
+$getinfo = $daemon->getblockchaininfo();
 $block_height = $getinfo['blocks'];
 
 if (empty($getinfo) || !empty($daemon->error)) {
